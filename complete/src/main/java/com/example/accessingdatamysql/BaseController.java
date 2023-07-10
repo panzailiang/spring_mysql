@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Map;
 import java.util.Optional;
 
-public abstract class BaseController<ID, T> {
-    protected abstract CrudService<ID, T> getSerivce();
+public abstract class BaseController<T, ID> {
+    protected abstract CrudService<T, ID> getSerivce();
 
     @PostMapping("")
     public T create(T entity){
